@@ -1,6 +1,5 @@
 
 import './App.css';
-import ApiGetPoema from './components/ApiGetPoema';
 import Navbar from './components/Navbar';
 import { Poemas } from './components/Poemas';
 

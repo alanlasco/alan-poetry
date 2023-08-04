@@ -19,7 +19,7 @@ const Navbar = () =>{
 
     return(
         <nav className='nav'>
-            <a href="" className="brand">ALAN<a href="" className='brand-2'>Poetry.</a></a>
+            <a href="" className="brand">ALAN<span className='brand-2'>Poetry.</span></a>
 
             <ul className={active}>
                 <li className="nav-item"><a href="">Home</a></li>
