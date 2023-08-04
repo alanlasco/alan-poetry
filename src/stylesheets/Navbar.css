@@ -1,0 +1,91 @@
+*,*::after, *::before{
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: burlywood;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-around ;
+    height: 8vh;
+    background-color: rgba(244, 243, 243, 0);
+}
+.brand {
+    font-size: 25px;
+    font-weight: bold;
+}
+@font-face {
+    font-family: Pacifico-Regular;
+    src: url('../fuentes/Pacifico-Regular.ttf');
+}
+
+.brand-2{
+    font-style: oblique;
+    font-family: Pacifico-Regular;
+    font-weight: 300;
+}
+
+.nav-menu{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.toggler div{
+    width: 3rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: darkgrey;
+    transition: 0.4s ease-in;
+}
+.toggler{
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+.toggler{
+    display: block;
+}    
+.nav-menu{
+    position:fixed;
+    top: 7vh;
+    right:0;
+    width: 50%;
+    height: 93vh;
+    background: chocolate ;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+}
+}
+/*activar clase*/
+.nav-active {
+    transform: translateX(0);
+}
+/*animaicon*/
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+}
