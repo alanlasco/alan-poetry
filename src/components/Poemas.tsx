@@ -1,32 +1,44 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import { usePoemas } from '../hooks/usePoemas';
 import { reqPoema } from '../interfaces/reqPoema';
 import '../stylesheets/Poema.css';
 
-
 export const Poemas = () => {
   const { poemas } = usePoemas();
-  const [showFullText, setShowFullText] = useState<boolean>(false);
 
-  const togglePoema = () => {
-    setShowFullText(!showFullText);
+  // Creamos un objeto para almacenar el estado de cada poema individualmente
+  const [poemaStates, setPoemaStates] = useState<{ [key: number]: boolean }>({});
+  const togglePoema = (poemaId: number) => {
+    setPoemaStates(prevState => ({
+      ...prevState,
+      [poemaId]: !prevState[poemaId]
+    }));
+  };
+  const getPoemaClass = (poemaId: number) => {
+    return `${poemaStates[poemaId] ? '' : 'toggled'}`;
   };
 
   const renderPoemas = (poema: reqPoema) => {
-    let fulltext= poema.poema;
-    let partialtext = poema.poema.slice(0, 150);
-    const currentPoema = showFullText ? fulltext : partialtext+'...';
-    const poemaFormatted = currentPoema.replace(/\n/g, "<br>")
+    
+    const isExpanded = poemaStates[poema.id_poema] || false;
+    const truncatedText = poema.poema.slice(0, 150);
+    const currentPoema = isExpanded ? poema.poema : truncatedText + '...';
+
     return (
-      <div className='poemas-container' key={poema.id_poema}>
+      <>
+      <div className={getPoemaClass(poema.id_poema)}>
+      <div className='poemas-container 'key={poema.id_poema}>
         <h4 className='titulo'>{poema.nombre}</h4>
         <br />
-        <p style={{whiteSpace: 'pre-line'}} className='poema toggled'>{currentPoema}</p>
+        <p style={{ whiteSpace: 'pre-line' }} className='poema'>{currentPoema}</p>
         <p className='fecha'>{poema.fecha}</p>
-        <button onClick={togglePoema}>
-          {showFullText ? 'Leer menos' : 'Leer más'}
-        </button>
+        <div className='btn-toggle' onClick={() => togglePoema(poema.id_poema)}>
+          {isExpanded ? 'Leer menos' : 'Leer más'}
+        </div>
       </div>
+      </div>
+      <br /><br />
+      </>
     );
   };
 
@@ -36,3 +48,9 @@ export const Poemas = () => {
     </>
   );
 };
+// En este código, hemos creado un estado poemaStates utilizando el estado de useState.Este estado es un objeto d
+
+
+
+
+

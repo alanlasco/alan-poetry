@@ -3,8 +3,24 @@
     align-items: center;
     justify-content: center;
     width: 300px;
+
 }
    .titulo ,.poema{
         text-align: left;
 }
-    
+.toggled{
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background: linear-gradient(to right, blue, pink);
+   
+}    
+.btn-toggle{
+    background: linear-gradient(to bottom, rgba(51, 46, 46, 0.622),70%,rgba(243, 243, 245, 0));
+    border: none;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    background-color: white;
+}
