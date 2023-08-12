@@ -63,7 +63,7 @@ a{
     display: block;
 }    
 .nav-menu{
-    position:fixed;
+    position:absolute;
     top: 7vh;
     right:0;
     width: 50%;
@@ -72,6 +72,7 @@ a{
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
+    z-index: 2;
 }
 }
 /*activar clase*/
