@@ -1,6 +1,7 @@
 import {useState}  from 'react';
 import '../stylesheets/Navbar.css';
-
+import {Link
+} from "react-router-dom";
 const Navbar = () =>{
     const [active, setActive]= useState('nav-menu');
     const[toggleIcon, setToggleIcon]= useState('toggler');
@@ -22,10 +23,9 @@ const Navbar = () =>{
             <a href="" className="brand">ALAN<span className='brand-2'>Poetry.</span></a>
 
             <ul className={active}>
-                <li className="nav-item"><a href="">Home</a></li>
-                <li className="nav-item"><a href="">Index</a></li>
-                <li className="nav-item"><a href="">About us</a></li>
-                <li className="nav-item"><a href="">Contact us</a></li>
+                <li className="nav-item"><Link to="/">Home</Link></li>
+                <li className="nav-item"><Link to="/aboutus">About Us</Link></li>
+                <li className="nav-item"><Link to="/contact">Contact</Link></li>
 
             </ul>
             <div onClick={navToggle} className={toggleIcon}>
