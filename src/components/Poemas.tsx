@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import { usePoemas } from '../hooks/usePoemas';
 import { reqPoema } from '../interfaces/reqPoema';
@@ -28,18 +29,18 @@ export const Poemas = () => {
   };  
   
 /*********/
-  const [isHiddenTextVisible, setIsHiddenTextVisible] = useState(false);
+  // const [isHiddenTextVisible, setIsHiddenTextVisible] = useState(false);
 
-  const toggleText = () => {
-    setIsHiddenTextVisible(!isHiddenTextVisible);
-  };
+  // const toggleText = () => {
+  //   setIsHiddenTextVisible(!isHiddenTextVisible);
+  // };
 
   const renderPoemas = (poema: reqPoema) => {
     
     const isExpanded = poemaStates[poema.id_poema] || false;
     const truncatedText = poema.poema.slice(0, 150);
     const currentPoema = isExpanded ? poema.poema : truncatedText + '...';
-
+    
     
   return (
     <div key={poema.id_poema}>
@@ -67,18 +68,42 @@ export const Poemas = () => {
     <br /><br />
     </div>
   );
+
   };
+
+  const [startIndex, setStartIndex] = useState(0);
+  const itemsPerPage = 3;
+
+  const handleNextClick = () => {
+    setStartIndex(startIndex + itemsPerPage);
+  };
+
+  const handlePreviousClick = () => {
+    setStartIndex(startIndex - itemsPerPage);
+  };
+
+  const currentPoemas = poemas.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <>
-
-      {poemas.map(renderPoemas)}
+      {currentPoemas.map(renderPoemas)}
+    <div>
+      <button onClick={handlePreviousClick} disabled={startIndex === 0}>
+        Anterior
+      </button>
+      <button onClick={handleNextClick} disabled={startIndex + itemsPerPage >= poemas.length}>
+        Siguiente
+      </button>
+      </div>
     </>
   );
 };
 
 
 // En este código, hemos creado un estado poemaStates utilizando el estado de useState.Este estado es un objeto d
+
+
+// En este ejemplo, he reorganizado el código para usar el estado startIndex para rastrear qué grupo de poemas se debe mostrar.Cuando haces clic en el botón "Siguiente", se actualiza startIndex, lo que a su vez actualiza los poemas que se renderizan en ese momento.
 
 
 

@@ -3,5 +3,6 @@ export interface reqPoema{
     poema: string,
     nombre: string,
     fecha: string,
-    isExpanded: boolean
+    isExpanded: boolean,
+    favorita: number
 }
