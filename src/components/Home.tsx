@@ -1,7 +1,7 @@
-import {useState} from 'react'
+import { useState } from 'react';
 import { Poemas } from './Poemas';
 import { PoemasFavoritos } from './PoemasFavoritos';
-import '../stylesheets/Home.css'
+import '../stylesheets/Home.css';
 
 function Home() {
     const [startIndex, setStartIndex] = useState<boolean>(false);
@@ -14,14 +14,19 @@ function Home() {
         setStartIndex(false);
     };
 
-  return (
-    <>
-    <ul className='nav-poemas'>
-        <li><a onClick={handleTodos}>Todos </a></li>
-        <li><a onClick={handleFavourite}>Favoritos</a></li>
-    </ul>
-          {startIndex ? <PoemasFavoritos />: <Poemas/> }
-    </>    
-  )
+    return (
+        <>
+            <ul className='nav-poemas'>
+                <li>
+                    <a onClick={handleTodos}>Todos </a>
+                </li>
+                <li>
+                    <a onClick={handleFavourite}>Favoritos</a>
+                </li>
+            </ul>
+                {startIndex ? <PoemasFavoritos /> : <Poemas />}
+        </>
+    );
 }
+
 export default Home;

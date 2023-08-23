@@ -43,7 +43,7 @@ export const Poemas = () => {
     
     
   return (
-    <div key={poema.id_poema}>
+    <div className='todosAnimation' key={poema.id_poema}>
     <div key={poema.id_poema} className={`poemas-container ${containerExpanded}`}>
       <h4 className='titulo'>{poema.nombre}</h4>
       <br />

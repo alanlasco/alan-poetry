@@ -40,12 +40,14 @@ export const PoemasFavoritos = () => {
         const isExpanded = poemaStates[poema.id_poema] || false;
         const truncatedText = poema.poema.slice(0, 150);
         const currentPoema = isExpanded ? poema.poema : truncatedText + '...';
-
+        
 
         return (
-            <div key={poema.id_poema}>
+            <div className='favouriteAnimation' key={poema.id_poema}>
                 <div key={poema.id_poema} className={`poemas-container ${containerExpanded}`}>
                     <h4 className='titulo'>{poema.nombre}</h4>
+                    <br />
+                    <p className='separador'></p>
                     <br />
                     <p
                         key={`poema-${poema.id_poema}`}
@@ -64,6 +66,9 @@ export const PoemasFavoritos = () => {
                     >
                         {isExpanded ? 'Leer menos' : 'Leer más'}
                     </button>
+                    <br />
+                    <br />
+                    <p className='separador'></p>
                 </div>
                 <br /><br />
             </div>

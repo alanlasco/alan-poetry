@@ -10,3 +10,21 @@
     align-items: center;
     justify-content: center;
 }
+
+.favouriteAnimation, .todosAnimation {
+    animation-duration: 0.4s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 50%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
