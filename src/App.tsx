@@ -2,7 +2,7 @@
 import './App.css';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
-import Home from './components/Home';
+import Poemario from './components/Poemario';
 import Navbar from './components/Navbar';
 import { Poemas } from './components/Poemas';
  import {
@@ -11,6 +11,8 @@ import { Poemas } from './components/Poemas';
   Route,
   Link,
 } from "react-router-dom";
+import { Home } from './components/Home';
+
 
 
 function App() {
@@ -20,8 +22,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/poemario" element={<Poemario/>} />
+          <Route path="/sobremi" element={<AboutUs />} />
+          <Route path="/contacto" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </div>

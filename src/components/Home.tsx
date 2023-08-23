@@ -1,32 +1,14 @@
-import { useState } from 'react';
-import { Poemas } from './Poemas';
-import { PoemasFavoritos } from './PoemasFavoritos';
+import React from 'react'
 import '../stylesheets/Home.css';
 
-function Home() {
-    const [startIndex, setStartIndex] = useState<boolean>(false);
 
-    const handleFavourite = () => {
-        setStartIndex(true);
-    };
+export const Home = () => {
+  return (
+    <div className='home-container'>
+        <h1 className='bienvenida'>Bienvenidos</h1>
 
-    const handleTodos = () => {
-        setStartIndex(false);
-    };
 
-    return (
-        <>
-            <ul className='nav-poemas'>
-                <li>
-                    <a onClick={handleTodos}>Todos </a>
-                </li>
-                <li>
-                    <a onClick={handleFavourite}>Favoritos</a>
-                </li>
-            </ul>
-                {startIndex ? <PoemasFavoritos /> : <Poemas />}
-        </>
-    );
+
+    </div>
+  )
 }
-
-export default Home;
