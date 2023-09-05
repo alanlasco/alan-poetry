@@ -2,8 +2,16 @@
     cursor: pointer;
     padding-right: 5px;
 }
+.nav-poemas li{
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
 
 .nav-poemas {
+    padding-top: 75px;
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;

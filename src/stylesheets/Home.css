@@ -7,6 +7,7 @@
     src: url('../fuentes/Pacifico-Regular.ttf');
 }
 .home-container{
+    padding-top: 75px;
     margin: 0 auto;
     align-items: center;
     justify-content: center;

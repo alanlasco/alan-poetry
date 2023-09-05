@@ -20,9 +20,9 @@ const Navbar = () =>{
 
     return(
         <nav className='nav'>
-            <a href="" className="brand">ALAN<span className='brand-2'>Poetry.</span></a>
-
+            <a href="" className='brand'>ALAN <span className='brand-2'>Poetry.</span></a>
             <ul className={active}>
+               
                 <li className="nav-item"><Link to="/">Inicio</Link></li>
                 <li className="nav-item"><Link to="/poemario">Poemario</Link></li>
                 <li className="nav-item"><Link to="/sobremi">Sobre Mi</Link></li>

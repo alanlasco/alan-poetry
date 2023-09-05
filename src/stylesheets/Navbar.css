@@ -9,22 +9,48 @@ html{
 body{
     font-size: 1.6rem;
 }
-li {
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: burlywood;
+.nav {
+    background: linear-gradient(90deg, rgba(238, 193, 57, 0.938813025210084) 35%, rgba(152, 255, 152, 1) 50%);
+    /* Cambia el color de fondo  */
+    color: #fff;
+    /* Cambia el color del texto*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Asegura que el navbar esté sobre otros elementos */
+    -webkit-box-shadow: 0px 7px 5px -4px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0px 7px 5px -4px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 7px 5px -4px rgba(0, 0, 0, 0.50);
 }
 
-.nav{
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px;
     display: flex;
-    align-items: center;
-    justify-content:space-around ;
-    height: 8vh;
-    background-color: rgba(244, 243, 243, 0);
+    justify-content: center;
 }
+
+.nav li {
+    margin: 0 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    /* Cambia el color del texto según tus preferencias */
+}
+
+/* Estilos del contenido de la página */
+
+/* Estilos adicionales según tus preferencias */
 .brand {
+    margin-left: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
     font-size: 25px;
     font-weight: bold;
 }
@@ -42,18 +68,20 @@ a{
 .nav-menu{
     display:flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 3rem;
+    justify-content: center;
+    gap: 3.5rem;
 }
 
 .toggler div{
-    width: 3rem;
+    width: 2.5rem;
     height: 0.2rem;
-    margin: 0.4rem;
-    background: darkgrey;
+    margin: 0.5rem;
+    background: white;
     transition: 0.4s ease-in;
 }
 .toggler{
+    margin-top: 15px;
+    margin-right: 60px;
     cursor: pointer;
     display: none;
 }
@@ -61,17 +89,20 @@ a{
 @media screen and (max-width:768px) {
 .toggler{
     display: block;
+    float: right;
 }    
 .nav-menu{
     position: fixed;
-    top: 7vh;
+    top: 8.4vh;
     right:0;
     width: 50%;
     height: 93vh;
-    background: chocolate ;
+    background: rgb(238, 193, 57);
+    background: linear-gradient(0deg, rgba(238, 193, 57, 0.938813025210084) 38%, rgba(152, 255, 152, 1) 100%);
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
+    z-index: 3;
     
 }
 }
