@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Poemas } from './Poemas';
 import { PoemasFavoritos } from './PoemasFavoritos';
 import '../stylesheets/Poemario.css';
+import { motion } from 'framer-motion';
 
 function Poemario() {
     const [startIndex, setStartIndex] = useState<boolean>(false);
@@ -15,7 +16,7 @@ function Poemario() {
     };
 
     return (
-        <>
+        <motion.div>
             <ul className='nav-poemas'>
                 <li>
                     <a onClick={handleTodos}>Todos </a>
@@ -25,7 +26,7 @@ function Poemario() {
                 </li>
             </ul>
                 {startIndex ? <PoemasFavoritos /> : <Poemas />}
-        </>
+        </motion.div>
     );
 }
 

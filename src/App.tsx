@@ -10,9 +10,11 @@ import { Poemas } from './components/Poemas';
   Routes,
   Route,
   Link,
+  useLocation
 } from "react-router-dom";
-import { Home } from './components/Home';
 
+import { Home } from './components/Home';
+import { AnimatedRoutes } from './components/AnimatedRoutes';
 
 
 function App() {
@@ -20,12 +22,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/poemario" element={<Poemario/>} />
-          <Route path="/sobremi" element={<AboutUs />} />
-          <Route path="/contacto" element={<Contact />} />
-        </Routes>
+        <AnimatedRoutes />
       </BrowserRouter>
     </div>
   );
