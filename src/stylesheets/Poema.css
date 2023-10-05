@@ -12,6 +12,16 @@
    .titulo ,.poema,.poema-blurred{
      text-align: left;
 }
+.separador-verde{
+    position: absolute;
+    width: 92%;
+    margin: 0 auto;
+    border-radius: 2px;
+    height: 1px;
+    border: none;
+    background:rgba(152, 255, 152, 1);
+    z-index: -1;
+}
 
 
 .separador{
@@ -25,7 +35,41 @@
     z-index: -1;
 }
 
-.btn-toggle-poema{
+.btn-toggle-poema-v{
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    border: none;
+    background: linear-gradient(to bottom, rgba(243, 243, 245, 0), 95%, rgba(152, 255, 152, 0.622));
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.4s ease-out 0.3s;
+}
+.btn-toggle-poema-v:hover {
+    background-color: rgba(152, 255, 152, 0.622);
+}
+
+.btn-toggled-poema-v {
+    background: linear-gradient(to bottom, rgba(243, 243, 245, 0), 70%, rgba(152, 255, 152, 0.622));
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.4s ease-out 0.2s;
+
+}
+
+.btn-toggled-poema-v:hover {
+    background-color: rgba(152, 255, 152, 0.622);
+}
+
+.btn-toggle-poema {
     margin: 0 auto;
     align-items: center;
     justify-content: center;
@@ -37,6 +81,7 @@
     border-radius: 4px;
     transition: background-color 0.4s ease-out 0.3s;
 }
+
 .btn-toggle-poema:hover {
     background-color: rgba(238, 193, 57, 0.622);
 }

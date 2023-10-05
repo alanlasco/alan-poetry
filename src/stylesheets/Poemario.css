@@ -1,27 +1,52 @@
 .nav-poemas li a{
+
+    text-align: center;
     cursor: pointer;
-    padding-right: 5px;
 }
 .nav-poemas li{
+    display: flex;
+    justify-content: center;
+            /* Centra horizontalmente */
+    align-items: center;
+    height: 36px;
+    width: 80px;
     list-style: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 10px;
+}
+.todos:hover{
+    background:rgba(238, 193, 57, 0.622); ;
+    color: white;
+}
+.favoritos:hover{
+    background: rgba(152, 255, 152, 0.622);
+    color: white;
 }
 
 .nav-poemas {
-    padding-top: 75px;
-    padding-bottom: 10px;
+background-color: rgb(245, 245, 220);
+    position: sticky;
+        top: 0;
+        /* Fija el navbar en la parte superior */
+        z-index: 100;
+    padding-top: 56px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
+    width: 100%;
+-webkit-box-shadow: -1px 17px 15px -23px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 17px 15px -23px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 17px 15px -23px rgba(0, 0, 0, 0.75);
 }
 
 .favouriteAnimation, .todosAnimation {
     animation-duration: 0.4s;
     animation-name: slidein;
+}
+.separador-vertical{
+    width: 1px;
+    height: 37px;
+    background: rgba(128, 128, 128, 0.781);
 }
 
 @keyframes slidein {
@@ -36,3 +61,6 @@
     }
 }
 
+.poemas-contenedor{
+    overflow-x: hidden;
+}

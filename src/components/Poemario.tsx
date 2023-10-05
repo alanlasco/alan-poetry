@@ -18,14 +18,18 @@ function Poemario() {
     return (
         <motion.div>
             <ul className='nav-poemas'>
-                <li>
+                <li className='todos'>
                     <a onClick={handleTodos}>Todos </a>
                 </li>
-                <li>
+                <p className='separador-vertical'></p>
+                <li className='favoritos'>
                     <a onClick={handleFavourite}>Favoritos</a>
                 </li>
             </ul>
+            <br /><br />
+                <div className='poemas-contenedor'>
                 {startIndex ? <PoemasFavoritos /> : <Poemas />}
+                </div>
         </motion.div>
     );
 }

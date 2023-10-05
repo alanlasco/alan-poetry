@@ -46,7 +46,9 @@ export const Poemas = () => {
     <div className='todosAnimation' key={poema.id_poema}>
     <div key={poema.id_poema} className={`poemas-container ${containerExpanded}`}>
       <h4 className='titulo'>{poema.nombre}</h4>
-      <br />
+        <br />
+        <p className='separador'></p>
+        <br />
       <p
         key={`poema-${poema.id_poema}`}
         style={{ whiteSpace: 'pre-line' }}

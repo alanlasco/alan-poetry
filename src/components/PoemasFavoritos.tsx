@@ -16,7 +16,7 @@ export const PoemasFavoritos = () => {
         }));
     };
     const getPoemaClass = (poemaId: number) => {
-        return `${poemaStates[poemaId] ? 'btn-toggle-poema' : 'btn-toggled-poema'}`;
+        return `${poemaStates[poemaId] ? 'btn-toggle-poema-v' : 'btn-toggled-poema-v'}`;
     };
     const getPoemaClassFecha = (poemaId: number) => {
         return `${poemaStates[poemaId] ? 'fecha' : 'fecha-none'}`;
@@ -47,7 +47,7 @@ export const PoemasFavoritos = () => {
                 <div key={poema.id_poema} className={`poemas-container ${containerExpanded}`}>
                     <h4 className='titulo'>{poema.nombre}</h4>
                     <br />
-                    <p className='separador'></p>
+                    <p className='separador-verde'></p>
                     <br />
                     <p
                         key={`poema-${poema.id_poema}`}
@@ -68,7 +68,6 @@ export const PoemasFavoritos = () => {
                     </button>
                     <br />
                     <br />
-                    <p className='separador'></p>
                 </div>
                 <br /><br />
             </div>
