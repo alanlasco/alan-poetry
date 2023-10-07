@@ -7,22 +7,69 @@
     src: url('../fuentes/Pacifico-Regular.ttf');
 }
 .home-container{
-    padding-top: 75px;
+    position: relative;
+    padding-top: 55px;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    width: 75%;
-    height: 500px;
+    width: 100%;
+    height: 100%;
 }
 
 
-.bienvenida {
+.bienvenida{
+    padding-top: 40px;
     font-family: Pacifico-Regular;
     font-style: oblique;
     font-weight: 150;
-    font-size: calc(4em + 4vw);
+    font-size: calc(2.3em + 4vw);
     background: -webkit-linear-gradient(90deg, rgba(238, 193, 57, 0.938813025210084) 35%, rgba(152, 255, 152, 1) 89%);
     background: linear-gradient(90deg, rgba(238, 193, 57, 0.938813025210084) 35%, rgba(152, 255, 152, 1) 89%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* Establecer un filtro transparente en la foto de fondo */
+.contenedor-bienvenida {
+    background-image: url(../images/cuaderno.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    min-height: 578px;
+    max-height: 800px;
+    position: relative;
+    /* Para que el contenido pseudo-elemento se posicione con respecto a este div */
+}
+
+.contenedor-bienvenida::before {
+    content: "";
+    /* Añade el contenido al pseudo-elemento */
+    position: absolute;
+    /* Posición absoluta para superponer el filtro en la foto de fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Filtro transparente (color negro con 50% de opacidad) */
+    z-index: 0;
+}
+.socials-contenedor{
+    position: relative;
+    z-index: 1;
+
+}
+#linkdn{
+    background-image: url(../images/linkedin.png);
+}
+#github{
+    background-image: url(../images/github.png);
+}
+.socials{
+    height: 50px;
+    width: 50px;
 }
