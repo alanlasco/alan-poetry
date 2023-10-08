@@ -8,7 +8,7 @@
 }
 .home-container{
     position: relative;
-    padding-top: 55px;
+    
     margin: 0 auto;
     align-items: center;
     justify-content: center;
@@ -35,12 +35,13 @@
 
 /* Establecer un filtro transparente en la foto de fondo */
 .contenedor-bienvenida {
+    padding-top: 55px;
     background-image: url(../images/cuaderno.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
-    min-height: 578px;
-    max-height: 800px;
+    min-height: 620px;
+    max-height: 900px;
     position: relative;
     /* Para que el contenido pseudo-elemento se posicione con respecto a este div */
 }
@@ -50,26 +51,51 @@
     /* Añade el contenido al pseudo-elemento */
     position: absolute;
     /* Posición absoluta para superponer el filtro en la foto de fondo */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    border-radius: 15px;
+    left: -10%;
+    right: -10%;
+    width: 80%;
+    height: 80%;
     background-color: rgba(0, 0, 0, 0.5);
     /* Filtro transparente (color negro con 50% de opacidad) */
+    -webkit-box-shadow: 3px 2px 60px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 2px 60px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 2px 60px -22px rgba(0, 0, 0, 0.75);
     z-index: 0;
+    border: rgba(152, 255, 152, 0.35) solid 1px;
 }
 .socials-contenedor{
     position: relative;
     z-index: 1;
 
-}
-#linkdn{
-    background-image: url(../images/linkedin.png);
-}
-#github{
-    background-image: url(../images/github.png);
+
 }
 .socials{
-    height: 50px;
-    width: 50px;
+    padding-top: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+
+.socials img{
+    height: 40px;
+    width: 40px;
+    -webkit-box-shadow: -1px 17px 16px -18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 17px 16px -18px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 17px 16px -18px rgba(0, 0, 0, 0.75);
+}
+
+.socials img:hover{
+    height: 55px;
+    width: 55px;
+}
+
+.sub-bienvenida{
+    color: rgba(238, 193, 57, 0.938813025210084);
+    font-style: oblique;
+    position: relative;
+    z-index: 1;
 }

@@ -14,16 +14,14 @@ export const Home = () => {
         <div className='contenedor-bienvenida'>
         <h1 className='bienvenida'>Bienvenidos</h1>
         <br />
-        <p>Poemario de Alan Lasco</p>
+        <h3 className='sub-bienvenida'>Poemario de Alan Lasco</h3>
         <br />
         <div className='socials-contenedor'>
           <a className="socials" href="https://github.com">
-            <img src={githubImage} alt="GitHub" />
-            GitHub
+            <img src={require(`../images/github.png`)} alt="GitHub" />
           </a>
           <a className="socials" href="https://linkedin.com">
-            <img src={linkdnImage} alt="LinkedIn" />
-            LinkedIn
+            <img src={require(`../images/linkedin.png`)} alt="LinkedIn" />
           </a>
         </div>
         </div>
