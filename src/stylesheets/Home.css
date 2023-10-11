@@ -4,12 +4,25 @@
 }
 
 .home-container {
+        background-image: url(../images/cuaderno2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+}
+
+.contenedor-bienvenida {
     position: relative;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
     width: 80%;
     height: 100%;
+    padding-top: 55px;
+
+    min-height: 620px;
+    max-height: 900px;
+    position: relative;
+    /* Comentarios mantenido */
 }
 
 .bienvenida {
@@ -148,16 +161,7 @@
     /* Comentarios mantenido */
 }
 
-.contenedor-bienvenida {
-    padding-top: 55px;
-    background-image: url(../images/cuaderno2.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-height: 620px;
-    max-height: 900px;
-    position: relative;
-    /* Comentarios mantenido */
-}
+
 
 /* .contenedor-bienvenida::before {
     content: "";
