@@ -12,9 +12,12 @@ export const Home = () => {
     
     >
         <div className='contenedor-bienvenida'>
-        <h1 className='bienvenida'>Bienvenidos</h1>
+        <p className='bienvenida'>Bienvenidos a</p>
+        <div className='alan-poetry'>
+        <p className='alan'>ALAN <span className='poetry'>Poetry.</span></p>
+        </div>
         <br />
-        <h3 className='sub-bienvenida'>Poemario de Alan Lasco</h3>
+        <p className='sub-bienvenida'>Poemario personal de Alan Lasco</p>
         <br />
         <div className='socials-contenedor'>
           <a className="socials" href="https://github.com">

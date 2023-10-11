@@ -1,84 +1,190 @@
-
-
-
-
 @font-face {
     font-family: Pacifico-Regular;
     src: url('../fuentes/Pacifico-Regular.ttf');
 }
-.home-container{
+
+.home-container {
     position: relative;
-    
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 
+.bienvenida {
+    
+    text-align: left;
+    padding-top: 80px;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: calc(36px + 1vw);
+    color: rgb(44, 44, 44);
+    /* Comentarios mantenido */
+}
+@media screen and (min-width: 350px) {
 
-.bienvenida{
-    padding-top: 40px;
-    font-family: Pacifico-Regular;
-    font-style: oblique;
-    font-weight: 150;
-    font-size: calc(2.3em + 4vw);
-    background: -webkit-linear-gradient(90deg, rgba(238, 193, 57, 0.938813025210084) 35%, rgba(152, 255, 152, 1) 89%);
-    background: linear-gradient(90deg, rgba(238, 193, 57, 0.938813025210084) 35%, rgba(152, 255, 152, 1) 89%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
-    z-index: 1;
+    .bienvenida,
+    .alan,
+    .poetry,
+    .sub-bienvenida {
+        font-size: calc(40px + 1vw);
+    }
+
+    .socials-container {
+        margin-left: 2vw;
+        /* Ajusta el valor según tus necesidades */
+    }
+
+    .alan-poetry {
+        width: 97%;
+        font-size: calc(36px + 1vw);
+        /* Ajusta el valor según tus necesidades */
+    }
 }
 
+/* Estilos para pantallas más pequeñas (mínimo 480px de ancho) */
+@media screen and (min-width: 480px) {
 
+    .bienvenida,
+    .alan,
+    .poetry,
+    .sub-bienvenida {
+        font-size: calc(40px + 1vw);
+    }
 
-/* Establecer un filtro transparente en la foto de fondo */
+    .socials-container {
+        margin-left: 2vw;
+        /* Ajusta el valor según tus necesidades */
+    }
+
+    .alan-poetry {
+        width: 55%;
+        font-size: calc(36px + 1vw);
+        /* Ajusta el valor según tus necesidades */
+    }
+}
+
+/* Estilos adicionales para tamaños de pantalla más grandes */
+@media screen and (min-width: 768px) {
+
+    .bienvenida,
+    .alan,
+    .poetry,
+    .sub-bienvenida {
+        font-size: calc(46px + 1vw);
+    }
+
+    .socials-container {
+        margin-left: 5vw;
+        /* Ajusta el valor según tus necesidades */
+    }
+
+    .alan-poetry {
+        width: 45%;
+        font-size: calc(36px + 1vw);
+        /* Ajusta el valor según tus necesidades */
+    }
+}
+
+/* Estilos adicionales para tamaños de pantalla aún más grandes */
+@media screen and (min-width: 1200px) {
+
+    .bienvenida,
+    .alan,
+    .poetry,
+    .sub-bienvenida {
+        font-size: calc(58px + 1vw);
+    }
+
+    .socials-container {
+        margin-left: 2.5vw;
+        /* Ajusta el valor según tus necesidades */
+    }
+
+    .alan-poetry {
+        width: 45%;
+        font-size: calc(32px + 1vw);
+        /* Ajusta el valor de font-size según tus necesidades */
+    }
+}
+
+.alan {
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: calc(30px + 1vw);
+    color: white;
+    /* Comentarios mantenido */
+}
+
+.poetry {
+    line-height: normal;
+    font-family: Pacifico-Regular;
+    text-align: left;
+    font-style: oblique;
+    font-weight: 500;
+    font-size: calc(24px + 1vw);
+    color: white;
+    /* Comentarios mantenido */
+}
+
+.alan-poetry {
+    margin-left: 5px;
+    margin-right: 5px;
+    background: rgba(152, 255, 152, 1);
+    height: 8%;
+    /* Ajusta el valor según tus necesidades */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    /* Evita que el contenido se desborde */
+    white-space: nowrap;
+    /* Evita el salto de línea en el texto */
+    text-overflow: ellipsis;
+    /* Añade puntos suspensivos si el texto se desborda */
+    /* Comentarios mantenido */
+}
+
 .contenedor-bienvenida {
     padding-top: 55px;
-    background-image: url(../images/cuaderno.jpg);
+    background-image: url(../images/cuaderno2.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
     min-height: 620px;
     max-height: 900px;
     position: relative;
-    /* Para que el contenido pseudo-elemento se posicione con respecto a este div */
+    /* Comentarios mantenido */
 }
 
-.contenedor-bienvenida::before {
+/* .contenedor-bienvenida::before {
     content: "";
-    /* Añade el contenido al pseudo-elemento */
     position: absolute;
-    /* Posición absoluta para superponer el filtro en la foto de fondo */
     margin: 0 auto;
     align-content: center;
     justify-content: center;
     border-radius: 15px;
     left: -10%;
     right: -10%;
-    width: 80%;
-    height: 80%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Filtro transparente (color negro con 50% de opacidad) */
-    -webkit-box-shadow: 3px 2px 60px -22px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 3px 2px 60px -22px rgba(0, 0, 0, 0.75);
-    box-shadow: 3px 2px 60px -22px rgba(0, 0, 0, 0.75);
-    z-index: 0;
-    border: rgba(152, 255, 152, 0.35) solid 1px;
-}
-.socials-contenedor{
-    position: relative;
-    z-index: 1;
+    width: 85%;
+    height: 85%;
+  
+} */
 
-
+.socials-contenedor {
+    padding-left: 15%;
+    float:left;
+    /* Comentarios mantenido */
 }
-.socials{
+
+.socials {
     padding-top: 25px;
     margin-right: 25px;
     margin-left: 25px;
+    /* Comentarios mantenido */
 }
-
 
 .socials img{
     height: 40px;
@@ -86,16 +192,25 @@
     -webkit-box-shadow: -1px 17px 16px -18px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -1px 17px 16px -18px rgba(0, 0, 0, 0.75);
     box-shadow: -1px 17px 16px -18px rgba(0, 0, 0, 0.75);
+    /* Comentarios mantenido */
 }
 
 .socials img:hover{
     height: 55px;
     width: 55px;
+    /* Comentarios mantenido */
 }
 
-.sub-bienvenida{
-    color: rgba(238, 193, 57, 0.938813025210084);
-    font-style: oblique;
-    position: relative;
-    z-index: 1;
+.sub-bienvenida {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: rgb(44, 44, 44);
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: calc(17px + 1vw);
+    font-style:italic;
+    text-align: left;
+    /* Comentarios mantenido */
 }
