@@ -27,6 +27,9 @@ export const Home = () => {
             <img src={require(`../images/linkedin.png`)} alt="LinkedIn" />
           </a>
         </div>
+        <div className='div-circular'>
+          <img src={require(`../images/pluma-azul.png`)} alt="" />
+        </div>
         </div>
 
 

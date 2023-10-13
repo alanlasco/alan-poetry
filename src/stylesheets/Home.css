@@ -9,6 +9,30 @@
         background-size: 100% 100%;
 
 }
+.div-circular {
+    border-radius: 50%;
+    border: 6px dashed rgba(152, 255, 152, 1);
+    height: calc(220px + 1vw);
+    width: calc(220px + 1vw);
+    position: absolute;
+    /* Cambia a posición absoluta */
+    top: 145px;
+    /* Ajusta la altura según sea necesario para que coincida con .bienvenida */
+    right: 20px;
+    /* Ajusta la distancia desde el borde derecho según tus necesidades */
+    transform: translateX(-85%);
+    /* Mueve el elemento a la derecha de la pantalla */
+    z-index: 1;
+    /* Ajusta el índice z si es necesario para que esté sobre otros elementos */
+}
+.div-circular img{
+    height: calc(300px + 1vw);
+    width: calc(230px + 1vw);
+    padding-right: 15px;
+    padding-bottom: 35px;
+    margin-top: -50px;
+
+}
 
 .contenedor-bienvenida {
     position: relative;
@@ -55,6 +79,7 @@
         font-size: calc(36px + 1vw);
         /* Ajusta el valor según tus necesidades */
     }
+    
 }
 
 /* Estilos para pantallas más pequeñas (mínimo 480px de ancho) */
@@ -77,6 +102,9 @@
         font-size: calc(36px + 1vw);
         /* Ajusta el valor según tus necesidades */
     }
+
+
+
 }
 
 /* Estilos adicionales para tamaños de pantalla más grandes */
@@ -100,6 +128,16 @@
         /* Ajusta el valor según tus necesidades */
     }
 }
+@media screen and (min-width: 900px) {
+    .div-circular {
+        transform: translateX(-5%);
+    }
+}
+@media screen  and (max-width: 900px){
+        .div-circular {
+                display: none;
+            }
+}
 
 /* Estilos adicionales para tamaños de pantalla aún más grandes */
 @media screen and (min-width: 1200px) {
@@ -121,6 +159,7 @@
         font-size: calc(32px + 1vw);
         /* Ajusta el valor de font-size según tus necesidades */
     }
+    
 }
 
 .alan {
