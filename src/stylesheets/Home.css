@@ -4,9 +4,10 @@
 }
 
 .home-container {
-        background-image: url(../images/cuaderno2.jpg);
+        /* background-image: url(../images/cuaderno2.jpg); */
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        background-color: rgb(223, 238, 223);;
 
 }
 .div-circular {
@@ -39,7 +40,7 @@
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 77%;
     height: 100%;
     padding-top: 55px;
 
@@ -137,6 +138,15 @@
         .div-circular {
                 display: none;
             }
+        /* .contenedor-bienvenida{
+            padding-left: 17%;
+        }   
+        .alan-poetry{
+            width: 69%;
+        } 
+        .sub-bienvenida{
+            transform: translateX(-5%);
+        } */
 }
 
 /* Estilos adicionales para tamaños de pantalla aún más grandes */
@@ -155,7 +165,7 @@
     }
 
     .alan-poetry {
-        width: 45%;
+        width: 50%;
         font-size: calc(32px + 1vw);
         /* Ajusta el valor de font-size según tus necesidades */
     }
