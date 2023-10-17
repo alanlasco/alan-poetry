@@ -40,16 +40,19 @@ body{
 .nav li {
     margin: 0 20px;
 }
-.nav-item:hover{
-    border-bottom: 4px solid rgba(152, 255, 152, 1);
+/* .nav-item:hover{ */
+    /* color:rgb(255, 255, 255); */
     
 
-}
+/* } */
 .nav a {
     text-decoration: none;
-    color: #fff;
+    color: #f0eded;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     /* Cambia el color del texto según tus preferencias */
+}
+.nav a:hover{
+    color:#fff
 }
 
 /* Estilos del contenido de la página */

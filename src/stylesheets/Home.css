@@ -5,9 +5,9 @@
 
 .home-container {
         /* background-image: url(../images/cuaderno2.jpg); */
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-color: rgb(223, 238, 223);;
+        /* background-repeat: no-repeat; */
+        /* background-size: 100% 100%; */
+        background-color: rgb(223, 238, 223);
 
 }
 .div-circular {
@@ -258,14 +258,14 @@
 }
 
 .sub-bienvenida {
-    padding-left: 5px;
+    padding-left: 15px;
     padding-right: 5px;
     padding-bottom: 5px;
     padding-top: 5px;
     color: rgb(44, 44, 44);
     font-family: sans-serif;
     font-weight: 700;
-    font-size: calc(17px + 1vw);
+    font-size: calc(13px + 1vw);
     font-style:italic;
     text-align: left;
     /* Comentarios mantenido */

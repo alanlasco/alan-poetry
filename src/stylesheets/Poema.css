@@ -3,9 +3,15 @@
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    max-width: 400px;
+    max-width: 550px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: rgb(248, 243, 228);
+    z-index: 2;
+    border: 1px solid rgba(160, 160, 160, 0.349);
+    border-radius: 15px;
 
 }
 
@@ -17,7 +23,7 @@
     width: 92%;
     margin: 0 auto;
     border-radius: 2px;
-    height: 1px;
+    height: 2px;
     border: none;
     background:rgba(152, 255, 152, 1);
     z-index: -1;
@@ -29,7 +35,7 @@
     width: 92%;
     margin: 0 auto;
     border-radius: 2px;
-    height: 1px;
+    height: 2px;
     border: none;
     background: rgba(238, 193, 57, 0.622);
     z-index: -1;
@@ -115,6 +121,10 @@
 }
 .fecha{
     display:block;
+    color: rgba(170, 170, 170, 0.877);
+    text-align: right;
+    padding-top: 25px;
+    padding-right: 5px;
 }
 
 
@@ -134,7 +144,7 @@
     right: 0;
     height: 40px;
     /* Ajusta el valor según tus necesidades */
-    background: linear-gradient(transparent, white);
+    background: linear-gradient(transparent, rgb(248, 243, 228));
     filter: blur(5px);
     /* Ajusta el valor de desenfoque según tus necesidades */
     pointer-events: none;
@@ -154,6 +164,11 @@
     }
 }
 
+.poema-expanded {
+    height: auto;
+    max-height: none;
+    transition: max-height 0.8s ease-in-out;
+}
 
 /*body {
     font-family: Arial, sans-serif;

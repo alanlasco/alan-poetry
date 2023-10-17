@@ -17,6 +17,7 @@ function Poemario() {
 
     return (
         <motion.div>
+            <div className='contenedor-poemas'>
             <ul className='nav-poemas'>
                 <li className='todos'>
                     <a onClick={handleTodos}>Todos </a>
@@ -30,6 +31,7 @@ function Poemario() {
                 <div className='poemas-contenedor'>
                 {startIndex ? <PoemasFavoritos /> : <Poemas />}
                 </div>
+            </div>    
         </motion.div>
     );
 }

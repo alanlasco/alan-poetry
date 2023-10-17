@@ -15,6 +15,8 @@ export const Poemas = () => {
       [poemaId]: !prevState[poemaId]
     }));
   };
+  
+
   const getPoemaClass = (poemaId: number) => {
     return `${poemaStates[poemaId] ? 'btn-toggle-poema' : 'btn-toggled-poema'}`;
   };
@@ -49,13 +51,16 @@ export const Poemas = () => {
         <br />
         <p className='separador'></p>
         <br />
-      <p
-        key={`poema-${poema.id_poema}`}
-        style={{ whiteSpace: 'pre-line' }}
-        className={getPoemaClassBlurred(poema.id_poema)}
-      >
-        {currentPoema}
-      </p>
+<p
+    key={`poema-${poema.id_poema}`}
+    style={{ whiteSpace: 'pre-line' }}
+    className={`${
+        getPoemaClassBlurred(poema.id_poema)} ${
+        poemaStates[poema.id_poema] ? 'poema-expanded' : ''
+    }`}
+>
+    {currentPoema}
+</p>
       <p key={`fecha-${poema.id_poema}`} className={getPoemaClassFecha(poema.id_poema)}>
         {poema.fecha}
       </p>
