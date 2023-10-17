@@ -95,11 +95,11 @@ export const Poemas = () => {
     <>
       {currentPoemas.map(renderPoemas)}
     <div>
-      <button onClick={handlePreviousClick} disabled={startIndex === 0}>
-        Anterior
+        <button className='button_slide slide_down' onClick={handlePreviousClick} disabled={startIndex === 0}>
+        {'<< Anterior'}
       </button>
-      <button onClick={handleNextClick} disabled={startIndex + itemsPerPage >= poemas.length}>
-        Siguiente
+      <button className='button_slide slide_down' onClick={handleNextClick} disabled={startIndex + itemsPerPage >= poemas.length}>
+        {'Siguiente >>'}
       </button>
       </div>
     </>
