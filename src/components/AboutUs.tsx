@@ -54,11 +54,13 @@ function AboutUs() {
               <div className="img-poem-container">
                 <img
                   className="img-poem-1"
-                  src={require(`../images/poema.jpg`)}
+                  src={require(`../images/poema2.jpg`)}
                   alt=""
                 />
                 <p className="caption">
-                  <em>publicado en Lorem.</em>
+                  <em>
+                    Publicado en la revista escolar "Sin principio ni final ".
+                  </em>
                 </p>
               </div>
               <div className="img-poem-container">
@@ -68,7 +70,10 @@ function AboutUs() {
                   alt=""
                 />
                 <p className="caption">
-                  <em>publicado en Lorem.</em>
+                  <em>
+                    publicado en el libro escolar "Pie firme sobre cálido
+                    cielo".
+                  </em>
                 </p>
               </div>
             </div>
