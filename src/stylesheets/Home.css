@@ -216,8 +216,10 @@
 } */
 
 .socials-contenedor {
+  display: flex;
   padding-left: 15%;
   float: left;
+
   /* Comentarios mantenido */
 }
 

@@ -50,6 +50,28 @@ function AboutUs() {
             ustedes son su propio Dios". Seamos libres al escribir y expresar
             todo lo que está en nuestra mente. Sean su propio dios.
             <br />
+            <div className="img-poems-container">
+              <div className="img-poem-container">
+                <img
+                  className="img-poem-1"
+                  src={require(`../images/poema.jpg`)}
+                  alt=""
+                />
+                <p className="caption">
+                  <em>publicado en Lorem.</em>
+                </p>
+              </div>
+              <div className="img-poem-container">
+                <img
+                  className="img-poem-1"
+                  src={require(`../images/poema.jpg`)}
+                  alt=""
+                />
+                <p className="caption">
+                  <em>publicado en Lorem.</em>
+                </p>
+              </div>
+            </div>
             <br />
             Espero que disfruten de mis poemas y escritos. ¡Espero que
             encuentren en ellos alguna frase que los transporte a un lugar
