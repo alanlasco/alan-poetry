@@ -1,6 +1,7 @@
 import React from "react";
 import "../stylesheets/Home.css";
 import { motion } from "framer-motion";
+import { Footer } from "./Footer";
 
 export const Home = () => {
   return (
@@ -33,6 +34,7 @@ export const Home = () => {
           <img src={require(`../images/pluma-azul.png`)} alt="" />
         </div>
       </div>
+      <Footer />
     </motion.div>
   );
 };

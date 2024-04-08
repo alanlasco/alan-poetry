@@ -1,6 +1,7 @@
 import React from "react";
 import "../stylesheets/Aboutme.css";
 import { motion } from "framer-motion";
+import { Footer } from "./Footer";
 
 function AboutUs() {
   return (
@@ -84,6 +85,7 @@ function AboutUs() {
           </p>
         </div>
       </div>
+      <Footer />
     </motion.div>
   );
 }
