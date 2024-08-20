@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../stylesheets/Poema.css";
-
-export const showPoema = () => {
+import { poemProps } from "../interfaces/inPoemProps";
+export const showPoema = ({ id_poema, titulo, texto, fecha }: poemProps) => {
   return;
   <>
     <div>showPoema</div>
