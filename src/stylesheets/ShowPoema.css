@@ -1,0 +1,41 @@
+.contenedorPoema {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.separador {
+    width: 92%;
+
+    border-radius: 2px;
+    height: .1em;
+    border: none;
+    background: rgba(45, 44, 40, 0.876);
+
+}
+
+.headerPoema,
+.footerPoema {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5em;
+}
+
+.tituloPoema {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.fechaPoema {
+    margin: 0;
+    font-size: 0.9em;
+    margin-left: auto;
+    color: #888;
+
+}
